@@ -29,8 +29,8 @@ class Solution:
 if __name__ == '__main__':
     
     height = [1,8,6,2,5,4,8,3,7]
-    # height = [4,3,2,1,4]
-    # height = [1,2,1]
+    height = [4,3,2,1,4]
+    height = [1,2,1]
     
     ans = Solution().maxArea(height)
     print(ans)
