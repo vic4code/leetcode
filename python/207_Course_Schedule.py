@@ -14,7 +14,7 @@ class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
             # build Adjacency list from Edges list
             adjList = self.buildAdjacencyList(numCourses, prerequisites)
-            print(adjList)
+            print('adjlist:', adjList)
             # Each vertex can have 3 different states:
             # state 0   : vertex is not visited. It's a default state.
             # state -1  : vertex is being processed. Either all of its descendants
@@ -23,7 +23,7 @@ class Solution:
             state = [0] * numCourses
     
             def hasCycle(v):
-                
+                print(state)
                 if state[v] == 1:
                     # This vertex is processed so we pass.
                     return False
@@ -40,6 +40,7 @@ class Solution:
                         return True
     
                 state[v] = 1
+                print(state)
                 return False
     
             # we traverse each vertex using DFS, if we find a cycle, stop and return
@@ -53,7 +54,7 @@ class Solution:
 if __name__ == '__main__':
     
     numCourses = 5
-    prerequisites = [[1,0],[2,1],[2,3]]
+    prerequisites = [[1,0],[2,0],[4,0],[2,1],[2,3]]
     
     ans = Solution().canFinish(numCourses, prerequisites)
     print(ans)
