@@ -29,7 +29,7 @@ class Solution:
                     if new_val > amount:
                         continue
 
-                    # Store only not visited value to save time
+                    # Store only not visited values to save time
                     if not visited[new_val]:
                         visited[new_val] = True
                         temp.append(new_val)
