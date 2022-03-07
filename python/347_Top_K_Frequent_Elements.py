@@ -30,7 +30,17 @@ class Solution:
             
 
 if __name__ == '__main__':
+    """
+    Time complexity : 
+    
+        O(N) for building a hash table 
+        O(NlogN) for sorting 
+        O(N) for reversing an array
+        O(k) for find the top-k keys
 
+        total => O(N + NlogN)
+
+    """
     nums = [1,2,3,3,4,5,5,6]
     k = 2
 
